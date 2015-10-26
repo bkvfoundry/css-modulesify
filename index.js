@@ -168,7 +168,7 @@ module.exports = function (browserify, options) {
         assign(tokensByFile, loader.tokensByFile);
 
         // store this file's source to be written out to disk later
-        sourceByFile[filename] = loader.finalSource;
+        sourceByFile[sourceKey][filename] = loader.finalSource;
 
         compiledCssStream.push(loader.finalSource);
 
